@@ -1,4 +1,4 @@
 package Moddels;
 
-public class Monster {
+public class Monster extends Entity{
 }

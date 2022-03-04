@@ -1,4 +1,4 @@
 package Moddels;
 
-public class Champion {
+public class Champion extends Entity {
 }

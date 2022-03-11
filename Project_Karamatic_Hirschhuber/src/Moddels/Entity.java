@@ -1,4 +1,81 @@
 package Moddels;
 
 public class Entity {
+   int HP, Mana, speed, atkspeed, mr, ar, ap, ad;
+   boolean aggresive;
+
+    public int getHP() {
+        return HP;
+    }
+    public int getMana() {
+        return Mana;
+    }
+    public int getSpeed() {
+        return speed;
+    }
+    public int getAtkspeed() {
+        return atkspeed;
+    }
+    public int getMr() {
+        return mr;
+    }
+    public int getAr() {
+        return ar;
+    }
+    public int getAp() {
+        return ap;
+    }
+    public int getAd() {
+        return ad;
+    }
+    public void setHP(int HP) {
+        this.HP = HP;
+    }
+    public void setMana(int mana) {
+        Mana = mana;
+    }
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    public void setAtkspeed(int atkspeed) {
+        this.atkspeed = atkspeed;
+    }
+    public void setMr(int mr) {
+        this.mr = mr;
+    }
+    public void setAr(int ar) {
+        this.ar = ar;
+    }
+    public void setAd(int ad) {
+        this.ad = ad;
+    }
+    public void setAp(int ap) {
+        this.ap = ap;
+    }
+    public void setAggresive(boolean aggresive) {
+        this.aggresive = aggresive;
+    }
+
+    public Entity(){
+        this(0,0,0,0,0,0,0,0,false);
+    }
+    public Entity(int HP,int Mana,int speed, int atkspeed,int mr,int ar, int ap,int ad,boolean aggresive) {
+        this.setHP(HP);
+        this.setMana(Mana);
+        this.setSpeed(speed);
+        this.setAtkspeed(atkspeed);
+        this.setMr(mr);
+        this.setAr(ar);
+        this.setAp(ap);
+        this.setAd(ad);
+        this.setAggresive(aggresive);
+    }
+
+    @Override
+    public String toString() {
+        return HP + " " + Mana + " " + speed + "" +
+                atkspeed + " " + mr + "" + ar + "" + ap+""+ ad + ""+aggresive;
+    }
+
+
 }

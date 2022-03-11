@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+    <list default="true" id="a7829a7d-3108-4f99-9a12-6a0478c98e6c" name="Default Changelist" comment="" />
+=======
+<<<<<<< HEAD
     <list default="true" id="4b48ed7d-5c3b-46cf-b3ad-89005d8d7c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
@@ -15,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/src/Moddels/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Monster.java" afterDir="false" />
     </list>
 >>>>>>> 9d976dfe1cd8531fefaf747f2db5a36414ad14dd
+>>>>>>> eb7549ce2bad9988bf8796d2806cf9a6eb5ae19f
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +99,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646394705966</updated>
+<<<<<<< HEAD
       <workItem from="1646394712329" duration="1659000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1646394712329" duration="327000" />
+>>>>>>> 9d976dfe1cd8531fefaf747f2db5a36414ad14dd
+=======
+      <workItem from="1646394712329" duration="1168000" />
+>>>>>>> 5460311d053e9d230cc87d1794b55e8590eb6274
+>>>>>>> eb7549ce2bad9988bf8796d2806cf9a6eb5ae19f
     </task>
     <servers />
   </component>

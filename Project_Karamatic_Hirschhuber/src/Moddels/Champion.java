@@ -2,13 +2,10 @@ package Moddels;
 
 public class Champion extends Entity {
 
-    //bábilities, winrate, name
     private String _name;
-    private String _qAbility;
-    private String _wAbility;
-    private String _eAbility;
-    private String _rAbility;
-    private double _winrate;
+    private String _firstAbility;
+    private String _secondAbility;
+    private double _winrate; //maybe so a win/loss stuff
 
     public String getName(){
         return _name;
@@ -17,34 +14,21 @@ public class Champion extends Entity {
         _name = name;
     }
 
-    public String getQAbility(){
-        return _qAbility;
+    public String getfirstAbility(){
+        return _firstAbility;
     }
-    public void setQAbility(String qAbility){
-        _qAbility = qAbility;
-    }
-
-    public String getWAbility(){
-        return _wAbility;
-    }
-    public void setWAbility(String wAbility){
-        _wAbility = wAbility;
+    public void setfirstAbility(String firstAbility){
+        _firstAbility = firstAbility;
     }
 
-    public String getEAbility(){
-        return _eAbility;
+    public String getSecondAbility(){
+        return _secondAbility;
     }
-    public void setEAbility(String eAbility){
-        _eAbility = eAbility;
-    }
-
-    public String getRAbility(){
-        return _rAbility;
-    }
-    public void setRAbility(String rAbility){
-        _rAbility = rAbility;
+    public void setSecondAbility(String secondAbility) {
+        _secondAbility = secondAbility;
     }
 
+    /*
     public double getWinrate(){
         return _winrate;
     }
@@ -53,13 +37,21 @@ public class Champion extends Entity {
             _winrate = winrate;
         }
     }
+     */
 
-    //TODO: ctors
+    Champion(){
+        this("", "", "");
+    }
+    Champion(String name, String firstAblity, String secondAbility){
+        this.setName(name);
+        this.setfirstAbility(firstAblity);
+        this.setSecondAbility(secondAbility);
+    }
 
 
     @Override
     public String toString(){
-        return super.toString() + " " + this._name + " " + this._qAbility + " " + this._wAbility + " " + this._eAbility + " " + this._rAbility + " " + this._winrate;
+        return super.toString() + " " + this._name + " " + this._firstAbility + " " + this._secondAbility;
     }
 
 }

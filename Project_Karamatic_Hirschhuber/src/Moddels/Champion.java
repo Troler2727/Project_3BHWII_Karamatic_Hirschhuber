@@ -1,5 +1,7 @@
 package Moddels;
 
+import java.time.LocalDate;
+
 public class Champion extends Entity {
 
     private String _name;
@@ -39,10 +41,13 @@ public class Champion extends Entity {
     }
      */
 
-    Champion(){
-        this("", "", "");
+    public Champion(){
+        this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", "", "");
     }
-    Champion(String name, String firstAblity, String secondAbility){
+    public Champion(int HP, int Mana, int speed, int atkspeed, int mr,
+                    int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility){
+
+        super(HP, Mana, speed, atkspeed, mr, ar, ap, ad, aggresive);
         this.setName(name);
         this.setfirstAbility(firstAblity);
         this.setSecondAbility(secondAbility);

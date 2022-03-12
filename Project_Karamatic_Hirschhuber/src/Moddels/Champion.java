@@ -44,8 +44,7 @@ public class Champion extends Entity {
     public Champion(){
         this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", "", "");
     }
-    public Champion(int HP, int Mana, int speed, int atkspeed, int mr,
-                    int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility){
+    public Champion(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility){
 
         super(HP, Mana, speed, atkspeed, mr, ar, ap, ad, aggresive);
         this.setName(name);

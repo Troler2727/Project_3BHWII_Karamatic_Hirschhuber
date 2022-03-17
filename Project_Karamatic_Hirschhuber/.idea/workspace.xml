@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
 HEAD
     <list default="true" id="4b48ed7d-5c3b-46cf-b3ad-89005d8d7c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -10,16 +11,19 @@ HEAD
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
 =======
     <list default="true" id="a7829a7d-3108-4f99-9a12-6a0478c98e6c" name="Default Changelist" comment="">
+=======
+    <list default="true" id="0fe3e9ae-615f-4af5-804c-db338a4a9afb" name="Default Changelist" comment="">
+>>>>>>> 598c8369948e2c141ce36c6a28dba0667a44b913
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Moddels/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Champion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Moddels/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Monster.java" afterDir="false" />
     </list>
->>>>>>> 9d976dfe1cd8531fefaf747f2db5a36414ad14dd
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
  HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,31 +42,25 @@ HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="26WFPHkkIjsXV8QvQLb8uhfBa8H" />
+>>>>>>> 598c8369948e2c141ce36c6a28dba0667a44b913
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-=======
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../HTL/coroni 3/swp/Veerbung" />
     <property name="project.structure.last.edited" value="Project" />
->>>>>>> 9d976dfe1cd8531fefaf747f2db5a36414ad14dd
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
+<<<<<<< HEAD
 HEAD
+=======
+>>>>>>> 598c8369948e2c141ce36c6a28dba0667a44b913
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -75,32 +73,39 @@ HEAD
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="APP_MAIN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="APP_MAIN" />
+      <module name="Project_Karamatic_Hirschhuber" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.APP_MAIN" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4b48ed7d-5c3b-46cf-b3ad-89005d8d7c60" name="Default Changelist" comment="" />
-      <created>1646394566921</created>
+      <changelist id="27299a1e-1181-45f7-82bd-8617f919b7cc" name="Default Changelist" comment="" />
+      <created>1647531510495</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646394566921</updated>
-      <workItem from="1646394568104" duration="1446000" />
-=======
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a7829a7d-3108-4f99-9a12-6a0478c98e6c" name="Default Changelist" comment="" />
-      <created>1646394705966</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1646394705966</updated>
-      <workItem from="1646394712329" duration="1659000" />
+      <updated>1647531510495</updated>
+      <workItem from="1647531511738" duration="87000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
 HEAD
+=======
+>>>>>>> 598c8369948e2c141ce36c6a28dba0667a44b913
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,13 +113,12 @@ HEAD
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-=======
-    <option name="version" value="3" />
->>>>>>> 9d976dfe1cd8531fefaf747f2db5a36414ad14dd
   </component>
 </project>

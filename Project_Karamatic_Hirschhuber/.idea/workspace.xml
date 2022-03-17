@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
+HEAD
     <list default="true" id="4b48ed7d-5c3b-46cf-b3ad-89005d8d7c60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
@@ -20,7 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
+ HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,7 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="25v4GegOXh5fs42qQGPrpW0aVn1" />
-<<<<<<< HEAD
+HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -62,7 +62,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
-<<<<<<< HEAD
+HEAD
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -100,7 +100,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-<<<<<<< HEAD
+HEAD
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

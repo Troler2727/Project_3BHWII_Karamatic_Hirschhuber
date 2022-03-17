@@ -1,5 +1,5 @@
 package Moddels;
 
 public class Monster extends Entity{
-    //name, buff, spawntime
+    //coin value, cooldown
 }

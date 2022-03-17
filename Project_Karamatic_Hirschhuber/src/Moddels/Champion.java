@@ -1,9 +1,11 @@
 package Moddels;
 
+import java.time.LocalDate;
+
 public class Champion extends Entity {
 
-    //bábilities, winrate, name
     private String _name;
+<<<<<<< HEAD
     private String _atk1;
     private String _atk2;
     private String _ability1;
@@ -12,6 +14,11 @@ public class Champion extends Entity {
     private int Mana;
     private int armor;
 
+=======
+    private String _firstAbility;
+    private String _secondAbility;
+    private double _winrate; //maybe so a win/loss stuff
+>>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
 
     public String getName(){
         return _name;
@@ -20,6 +27,7 @@ public class Champion extends Entity {
         _name = name;
     }
 
+<<<<<<< HEAD
     public String getAtk1(){
         return _atk1;
     }
@@ -50,13 +58,52 @@ public class Champion extends Entity {
 
 
 
+=======
+    public String getfirstAbility(){
+        return _firstAbility;
+    }
+    public void setfirstAbility(String firstAbility){
+        _firstAbility = firstAbility;
+    }
 
-    //TODO: ctors
+    public String getSecondAbility(){
+        return _secondAbility;
+    }
+    public void setSecondAbility(String secondAbility) {
+        _secondAbility = secondAbility;
+    }
+
+    /*
+    public double getWinrate(){
+        return _winrate;
+    }
+    public void setWinrate(double winrate){
+        if(winrate >= 0){
+            _winrate = winrate;
+        }
+    }
+     */
+>>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
+
+    public Champion(){
+        this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", "", "");
+    }
+    public Champion(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility){
+
+        super(HP, Mana, speed, atkspeed, mr, ar, ap, ad, aggresive);
+        this.setName(name);
+        this.setfirstAbility(firstAblity);
+        this.setSecondAbility(secondAbility);
+    }
 
 
     @Override
     public String toString(){
+<<<<<<< HEAD
         return super.toString() + " " + this._name + " " + this._atk1 + " " + this._atk2 + " " + this._ability1 + " " + this._ability2;
+=======
+        return super.toString() + " " + this._name + " " + this._firstAbility + " " + this._secondAbility;
+>>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
     }
 
 }

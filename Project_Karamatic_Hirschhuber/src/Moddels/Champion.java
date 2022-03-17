@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Champion extends Entity {
 
     private String _name;
-<<<<<<< HEAD
+
     private String _atk1;
     private String _atk2;
     private String _ability1;
@@ -14,11 +14,11 @@ public class Champion extends Entity {
     private int Mana;
     private int armor;
 
-=======
+
     private String _firstAbility;
     private String _secondAbility;
     private double _winrate; //maybe so a win/loss stuff
->>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
+
 
     public String getName(){
         return _name;
@@ -27,7 +27,7 @@ public class Champion extends Entity {
         _name = name;
     }
 
-<<<<<<< HEAD
+
     public String getAtk1(){
         return _atk1;
     }
@@ -58,7 +58,7 @@ public class Champion extends Entity {
 
 
 
-=======
+
     public String getfirstAbility(){
         return _firstAbility;
     }
@@ -83,7 +83,7 @@ public class Champion extends Entity {
         }
     }
      */
->>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
+
 
     public Champion(){
         this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", "", "");
@@ -99,11 +99,11 @@ public class Champion extends Entity {
 
     @Override
     public String toString(){
-<<<<<<< HEAD
+
         return super.toString() + " " + this._name + " " + this._atk1 + " " + this._atk2 + " " + this._ability1 + " " + this._ability2;
-=======
-        return super.toString() + " " + this._name + " " + this._firstAbility + " " + this._secondAbility;
->>>>>>> 09d0a53b72c7fd343f407d996f21667a21821cdb
+
+
+
     }
 
 }

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fe3e9ae-615f-4af5-804c-db338a4a9afb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Moddels/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Champion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Moddels/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Entity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

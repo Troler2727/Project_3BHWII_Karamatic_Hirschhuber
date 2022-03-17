@@ -4,11 +4,14 @@ public class Champion extends Entity {
 
     //bábilities, winrate, name
     private String _name;
-    private String _qAbility;
-    private String _wAbility;
-    private String _eAbility;
-    private String _rAbility;
-    private double _winrate;
+    private String _atk1;
+    private String _atk2;
+    private String _ability1;
+    private String _ability2;
+    private int HP;
+    private int Mana;
+    private int armor;
+
 
     public String getName(){
         return _name;
@@ -17,49 +20,43 @@ public class Champion extends Entity {
         _name = name;
     }
 
-    public String getQAbility(){
-        return _qAbility;
+    public String getAtk1(){
+        return _atk1;
     }
-    public void setQAbility(String qAbility){
-        _qAbility = qAbility;
+    public void setAtk1 (String atk1){
+        _atk1 = atk1;
     }
 
-    public String getWAbility(){
-        return _wAbility;
+    public String getAtk2(){
+        return _atk1;
     }
-    public void setWAbility(String wAbility){
-        _wAbility = wAbility;
+    public void setAtk2 (String atk2){
+        _atk1 = atk2;
     }
 
     public String getEAbility(){
-        return _eAbility;
+        return _ability1;
     }
     public void setEAbility(String eAbility){
-        _eAbility = eAbility;
+        _ability1 = eAbility;
     }
 
     public String getRAbility(){
-        return _rAbility;
+        return _ability2;
     }
     public void setRAbility(String rAbility){
-        _rAbility = rAbility;
+        _ability2 = rAbility;
     }
 
-    public double getWinrate(){
-        return _winrate;
-    }
-    public void setWinrate(double winrate){
-        if(winrate >= 0){
-            _winrate = winrate;
-        }
-    }
+
+
 
     //TODO: ctors
 
 
     @Override
     public String toString(){
-        return super.toString() + " " + this._name + " " + this._qAbility + " " + this._wAbility + " " + this._eAbility + " " + this._rAbility + " " + this._winrate;
+        return super.toString() + " " + this._name + " " + this._atk1 + " " + this._atk2 + " " + this._ability1 + " " + this._ability2;
     }
 
 }

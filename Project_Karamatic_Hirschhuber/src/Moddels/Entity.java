@@ -71,10 +71,44 @@ public class Entity {
         this.setAggresive(aggresive);
     }
 
+    public void recive_ad_damage (int damage) {
+        int damage_after_calc;
+        // calc damage
+        damage_after_calc = damage - ar ;
+
+        if (damage_after_calc <= 0){
+            System.out.println("to tanky");
+        }
+        else {
+            HP = HP - damage_after_calc;
+        }
+
+    }
+
+    public void recive_ap_damage (int damage) {
+        int damage_after_calc;
+        // calc damage
+        damage_after_calc = damage - mr ;
+
+        if (damage_after_calc <= 0){
+            System.out.println("to tanky");
+        }
+        else {
+            HP = HP - damage_after_calc;
+        }
+
+    }
+
+    public void heal (int heal) {
+        HP = HP + heal ;
+    }
+
+
+
     @Override
     public String toString() {
-        return HP + " " + Mana + " " + speed + "" +
-                atkspeed + " " + mr + "" + ar + "" + ap+""+ ad + ""+aggresive;
+        return HP + " " + Mana + " " + speed + " " +
+                atkspeed + " " + mr + " " + ar + " " + ap+" "+ ad + " "+aggresive;
     }
 
 

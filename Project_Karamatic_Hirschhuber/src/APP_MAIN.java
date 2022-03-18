@@ -1,9 +1,6 @@
 import Moddels.Entity;
 
 public class APP_MAIN {
-    public static void main(String[] args) {
-        System.out.println("Hallo Welt");
-    }
 
     public static void main(String[] args) {
         // public Entity(int HP,int Mana,int speed, int atkspeed,int mr,int ar, int ap,int ad,boolean aggresive)

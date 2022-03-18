@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36389a50-2fc5-4f0e-aa71-8bf1c7a8c55d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Moddels/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Champion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Moddels/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/Monster.java" afterDir="false" />
-    </list>
+    <list default="true" id="36389a50-2fc5-4f0e-aa71-8bf1c7a8c55d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647600604481</updated>
-      <workItem from="1647600610799" duration="2382000" />
+      <workItem from="1647600610799" duration="3071000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@ public class Champion extends Entity {
     private String _name;
     private String _firstAbility;
     private String _secondAbility;
+    private double gold;
     private double _winrate; //maybe so a win/loss stuff
 
 
@@ -31,6 +32,15 @@ public class Champion extends Entity {
         _secondAbility = secondAbility;
     }
 
+    public double getGold() {
+        return gold;
+    }
+
+    public void setGold(double gold) {
+        if (gold >= 0) this.gold = gold;
+        else System.out.println("U POOR");
+    }
+
     /*
     public double getWinrate(){
         return _winrate;
@@ -44,21 +54,22 @@ public class Champion extends Entity {
 
 
     public Champion(){
-        this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", "", "");
+        this( 0, 0, 0, 0, 0, 0, 0,0 ,0.0, false, "", "", "");
     }
-    public Champion(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility){
+    public Champion(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad,double gold, boolean aggresive, String name, String firstAblity, String secondAbility){
 
         super(HP, Mana, speed, atkspeed, mr, ar, ap, ad, aggresive);
         this.setName(name);
         this.setfirstAbility(firstAblity);
         this.setSecondAbility(secondAbility);
+        this.setGold(gold);
     }
 
 
     @Override
     public String toString(){
 
-        return super.toString() + " " + this._name + " " + this._firstAbility + " " + this._secondAbility;
+        return super.toString() + " NAME: " + this._name + " GOLD : " +this.gold+""+ this._firstAbility + " " + this._secondAbility;
 
 
 

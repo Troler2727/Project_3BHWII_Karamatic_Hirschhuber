@@ -12,6 +12,9 @@ public class METHODS {
         c.setHP(100);
         c.setMana(100);
         c.setSpeed(20);
+<<<<<<< HEAD
+        //c.setAtkspeed();
+=======
         c.setAtkspeed(20);
         c.setMr(5);
         c.setAr(5);
@@ -21,6 +24,7 @@ public class METHODS {
         c.setAggresive(false);
         c.setfirstAbility("");
         c.setSecondAbility("");
+>>>>>>> 12e0123e968b1a255950cfe775e016bfecacce7e
 
 
 

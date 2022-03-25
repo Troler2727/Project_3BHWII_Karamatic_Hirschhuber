@@ -4,6 +4,7 @@
     <list default="true" id="36389a50-2fc5-4f0e-aa71-8bf1c7a8c55d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Moddels/METHODS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moddels/METHODS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
       <updated>1647600604481</updated>
       <workItem from="1647600610799" duration="4178000" />
       <workItem from="1647605200128" duration="813000" />
-      <workItem from="1648190701902" duration="2766000" />
+      <workItem from="1648190701902" duration="3860000" />
     </task>
     <servers />
   </component>

@@ -12,11 +12,31 @@ public class METHODS {
         c.setHP(100);
         c.setMana(100);
         c.setSpeed(20);
-        c.setAtkspeed();
+        //c.setAtkspeed();
 
 
 
 
         return c;
+    }
+
+
+    public static void gamemenu(){
+        char choice;
+        System.out.println("Herzlich Willkommen!");
+        System.out.println("Wie wünschen Sie fortzufahren?");
+        System.out.println("PvP[G]");
+        System.out.println("PvE[M]");
+        System.out.println("Shop[P]");
+        System.out.println("Championverwaltung[C]");
+        System.out.println("Beenden[B]");
+        System.out.print("Ihre Wahl: ");
+        choice = reader.next().toLowerCase().charAt(0);
+
+        switch(choice){
+            case 'B':
+                System.out.println("Auf Wiedersehen!");
+                break;
+        }
     }
 }

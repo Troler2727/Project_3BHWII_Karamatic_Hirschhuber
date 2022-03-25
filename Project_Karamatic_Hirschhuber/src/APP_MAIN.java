@@ -1,3 +1,4 @@
+import Moddels.Champion;
 import Moddels.Entity;
 
 public class APP_MAIN {
@@ -16,6 +17,10 @@ public class APP_MAIN {
         System.out.println(e1);
 
 
+    }
+
+    public void create_champion () {
+        int hp,Mana,speed,atkspeed,mr,ar,ap,ad;
     }
 
 }

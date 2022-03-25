@@ -8,7 +8,8 @@ public class METHODS {
     public static Champion create_champ() {
         Champion c = new Champion();
         System.out.println("Please enter Champion Name:");
-        c.setName(reader.nextLine());
+        String name = reader.nextLine();
+        c.setName(name);
         c.setHP(100);
         c.setMana(100);
         c.setSpeed(20);

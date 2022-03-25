@@ -2,6 +2,8 @@ import Moddels.Entity;
 
 public class APP_MAIN {
 
+    char choice;
+
     public static void main(String[] args) {
         // public Entity(int HP,int Mana,int speed, int atkspeed,int mr,int ar, int ap,int ad,boolean aggresive)
         Entity e1 = new Entity(100, 100, 100,100,10,10, 10,10,false);
@@ -17,5 +19,6 @@ public class APP_MAIN {
 
 
     }
+    
 
 }

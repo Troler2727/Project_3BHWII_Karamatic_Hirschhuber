@@ -42,6 +42,22 @@ public class METHODS {
         choice = reader.next().toLowerCase().charAt(0);
 
         switch(choice){
+            case 'G':
+
+                break;
+
+            case 'M':
+
+                break;
+
+            case 'P':
+
+                break;
+
+            case 'C':
+
+                break;
+
             case 'B':
                 System.out.println("Auf Wiedersehen!");
                 break;

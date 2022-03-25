@@ -2,11 +2,12 @@ package Moddels;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Random;
 
 public class Monster extends Entity {
 
     private String _monstername;
-    private int _coinValue;
+    private double _coinValue;
     private LocalTime _timeKilled;
 
     public String getMonstername(){
@@ -16,10 +17,11 @@ public class Monster extends Entity {
         _monstername = monstername;
     }
 
-    public int getCoinValue(){
-        return _coinValue;
+    public double getCoinValue(){
+        Random rand = new Random();
+        return _coinValue*(rand.nextInt((12 - 8) + 1) + 8)/10;
     }
-    public void setCoinValue(int coinValue){
+    public void setCoinValue(double coinValue){
         if(coinValue > 0){
             _coinValue = coinValue;
         }
@@ -34,9 +36,9 @@ public class Monster extends Entity {
 
 
     public Monster(){
-        this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", 0, LocalTime.now());
+        this( 0, 0, 0, 0, 0, 0, 0,0 , false, "", 0.0, LocalTime.now());
     }
-    public Monster(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String monstername, int coinValue, LocalTime timeKilled){
+    public Monster(int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String monstername, double coinValue, LocalTime timeKilled){
 
         super(HP, Mana, speed, atkspeed, mr, ar, ap, ad, aggresive);
         this.setMonstername(monstername);

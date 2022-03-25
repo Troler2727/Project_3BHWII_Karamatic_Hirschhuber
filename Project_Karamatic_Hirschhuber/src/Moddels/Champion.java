@@ -65,6 +65,8 @@ public class Champion extends Entity {
         this.setGold(gold);
     }
 
+    public double atk_prio(int atkdisadvantage){return (speed+atkspeed*1.2-atkdisadvantage);}
+
 
     @Override
     public String toString(){

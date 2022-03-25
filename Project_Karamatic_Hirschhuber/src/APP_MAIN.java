@@ -22,8 +22,6 @@ public class APP_MAIN {
     }
     
 
-    public void create_champion () {
-        int hp,Mana,speed,atkspeed,mr,ar,ap,ad;
-    }
+
 
 }

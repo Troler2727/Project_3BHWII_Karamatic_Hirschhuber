@@ -17,6 +17,7 @@ public class METHODS {
         c.setAr(5);
         c.setAp(0);
         c.setAd(20);
+        c.setGold(100.00);
         c.setAggresive(false);
         c.setfirstAbility("");
         c.setSecondAbility("");

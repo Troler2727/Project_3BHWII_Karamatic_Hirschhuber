@@ -12,7 +12,14 @@ public class METHODS {
         c.setHP(100);
         c.setMana(100);
         c.setSpeed(20);
-        c.setAtkspeed();
+        c.setAtkspeed(20);
+        c.setMr(5);
+        c.setAr(5);
+        c.setAp(0);
+        c.setAd(20);
+        c.setAggresive(false);
+        c.setfirstAbility("");
+        c.setSecondAbility("");
 
 
 

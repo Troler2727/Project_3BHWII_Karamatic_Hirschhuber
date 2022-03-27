@@ -1,4 +1,4 @@
-package Moddels;
+package Models;
 
 public class Entity {
    int HP, Mana, speed, atkspeed, mr, ar, ap, ad;

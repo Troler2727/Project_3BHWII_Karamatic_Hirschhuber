@@ -1,6 +1,5 @@
-import Moddels.Champion;
-import Moddels.Entity;
-import Moddels.METHODS;
+import Models.Entity;
+import Models.Methods;
 
 public class APP_MAIN {
 
@@ -17,7 +16,7 @@ public class APP_MAIN {
 
         //System.out.println(e1);
 
-        METHODS.gamemenu();
+        Methods.gamemenu();
 
 
     }

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36389a50-2fc5-4f0e-aa71-8bf1c7a8c55d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Methods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APP_MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/APP_MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Moddels/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Champion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Moddels/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Moddels/METHODS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Moddels/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Monster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -31,13 +39,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -58,7 +68,8 @@
       <updated>1647600604481</updated>
       <workItem from="1647600610799" duration="4178000" />
       <workItem from="1647605200128" duration="813000" />
-      <workItem from="1648190701902" duration="6232000" />
+      <workItem from="1648190701902" duration="7695000" />
+      <workItem from="1648211996116" duration="1702000" />
     </task>
     <servers />
   </component>
@@ -75,5 +86,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

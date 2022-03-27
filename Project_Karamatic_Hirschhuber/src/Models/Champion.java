@@ -1,6 +1,4 @@
-package Moddels;
-
-import java.time.LocalDate;
+package Models;
 
 public class Champion extends Entity {
 

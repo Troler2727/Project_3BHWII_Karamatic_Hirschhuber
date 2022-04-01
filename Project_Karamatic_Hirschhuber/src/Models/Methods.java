@@ -1,5 +1,10 @@
 package Models;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.Scanner;
 
 public class Methods {
@@ -54,32 +59,64 @@ public class Methods {
                     break;
 
                 case 'p':
-                    System.out.println("Shop");
-                    break;
+                    do {
+                        System.out.println("SHOP \n");
+                        System.out.println("AD[D]");
+                        System.out.println("AP[P]");
+                        System.out.println("Tank[T]");
+                        System.out.println("Zurück[Z]");
+                        System.out.println("Ihre Wahl: ");
+                        choice = reader.next().toLowerCase().charAt(0);
+                        reader = new Scanner(System.in);
+
+                        switch (choice) {
+                            case 'd':
+                                System.out.println("10 AD");
+                                System.out.println("20 AD");
+                                System.out.println("40 AD");
+                                break;
+                            case 'p':
+                                System.out.println("10 AP");
+                                System.out.println("25 AP");
+                                System.out.println("50 AP");
+                                break;
+                            case 't':
+                                System.out.println("10 Rüstung");
+                                System.out.println("20 Rüstung");
+                                System.out.println("15 Magieresistenz");
+                                System.out.println("30 Magieresistenz");
+                                System.out.println("50 Leben");
+                                System.out.println("100 Leben");
+                                break;
+                                        }
+                        }
+                        while(choice != 'z');
+                        break;
 
                 case 'c':
-                    System.out.println("Champion laden[L]");
-                    System.out.println("Champion erstellen[C]");
-                    System.out.println("Champion löschen[D]");
-                    System.out.print("Ihre Wahl: ");
-                    choice = reader.next().toLowerCase().charAt(0);
-                    reader = new Scanner(System.in);
+                    do {
+                        System.out.println("CHAMPIONVERWALTUNG\n");
+                        System.out.println("Champion laden[L]");
+                        System.out.println("Champion erstellen[C]");
+                        System.out.println("Champion löschen[D]");
+                        System.out.println("Zurück[Z]");
+                        System.out.print("Ihre Wahl: ");
+                        choice = reader.next().toLowerCase().charAt(0);
+                        reader = new Scanner(System.in);
 
-                    switch (choice) {
-                        case 'l':
-                            System.out.println("Wählen Sie Ihren Champion aus!");
-                            break;
-                        case 'c':
-                            createChamp();
-                            break;
-                        case 'd':
-                            System.out.println("Wählen Sie Ihren Champion aus!");
-                            break;
-                        default:
-                            choice = ' ';
-                            System.out.println("Falsche Taste. Rückkehr zum Hauptmenü");
-                            break;
-                    }
+                        switch (choice) {
+                            case 'l':
+                                System.out.println("Wählen Sie Ihren Champion aus!");
+                                break;
+                            case 'c':
+                                createChamp();
+                                break;
+                            case 'd':
+                                System.out.println("Wählen Sie Ihren Champion aus!");
+                                break;
+                                        }
+                        }
+                    while(choice != 'z');
                     break;
 
                 case 'b':
@@ -93,5 +130,34 @@ public class Methods {
 
         }
         while(choice != 'b');
+    }
+
+    public static void writeChamp(Path path, Champion c) throws IOException {
+
+        //Article a in eine Zeichenkette umwandeln mit Strichppunkt dazwischen
+        String champ = c.getName() + ";" + c.getfirstAbility() + ";" + c.getSecondAbility() + ";" + c.getGold()+ ";" +
+                c.getHP() + ";" + c.getMana() + ";" + c.getAd() + ";" + c.getAp() + ";" + c.getAtkspeed() + ";" +
+                c.getAr() + ";" + c.getMr() + ";" + c.getSpeed() + ";\n";
+        if(Files.exists(path)){
+            Files.writeString(path, champ, StandardOpenOption.APPEND);
+        }
+        else{
+            Files.writeString(path, champ, StandardOpenOption.CREATE);
+        }
+
+    }
+
+    public static void writeChamp(Path path, List<Champion> cList){
+
+        try {
+            Files.delete(path);
+
+            for (Champion c : cList) {
+                writeChamp(path, c);
+            }
+        }
+        catch(IOException e){
+            System.out.println("Fehler beim Hinzufügen!");
+        }
     }
 }

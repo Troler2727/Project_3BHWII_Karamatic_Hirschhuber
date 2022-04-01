@@ -36,7 +36,9 @@ public class Methods {
             c.setSecondAbility("");
 
             writeChamp(path, c);
+        System.out.println("Champion erstellt!");
             return c;
+
     }
 
 

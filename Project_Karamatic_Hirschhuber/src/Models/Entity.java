@@ -107,8 +107,8 @@ public class Entity {
 
     @Override
     public String toString() {
-        return HP + " " + Mana + " " + speed + " " +
-                atkspeed + " " + mr + " " + ar + " " + ap+" "+ ad + " "+aggresive;
+        return "HP:" +HP + " MP: " + Mana + " SPEED: " + speed + " ATKSPEED: " +
+                atkspeed + "  MR: " + mr + " AR: " + ar + " AP: " + ap+"  AD:"+ ad + " aggresive: "+aggresive;
     }
 
 

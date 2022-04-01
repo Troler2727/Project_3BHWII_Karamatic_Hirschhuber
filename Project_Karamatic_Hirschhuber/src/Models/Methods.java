@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.List;
+import java.util.*;
 import java.util.Scanner;
 
 public class Methods {
@@ -21,7 +21,7 @@ public class Methods {
         c.setAtkspeed(20);
         c.setMr(5);
         c.setAr(5);
-        c.setAp(0);
+        c.setAp(5);
         c.setAd(20);
         c.setGold(100.00);
         c.setAggresive(false);
@@ -159,5 +159,67 @@ public class Methods {
         catch(IOException e){
             System.out.println("Fehler beim Hinzufügen!");
         }
+    }
+
+    public static double fight (Monster m, Champion c){
+        boolean repatk;
+        char choice;
+        System.out.print("As you walk into the Arena you see yur enemy ");
+        System.out.println(m.getMonstername());
+        //System.out.println(m.toString());
+
+        while (m.getHP() > 0 && c.getHP() > 0){
+
+            if (m.getAtkspeed()*m.getSpeed()>c.getAtkspeed()*c.getSpeed()){
+
+                System.out.println(m.getMonstername() + " dealt "+ m.getAd() + "damage to you" );
+                c.recive_ad_damage(m.getAd());
+                c.setAtkspeed((int)Math.round(c.getAtkspeed()+10));
+                if(repatk= true){
+                System.out.println(m.toString());}
+                m.setAtkspeed((int)Math.round(m.getAtkspeed()-10));
+
+            }
+            else {
+                c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
+                System.out.println(c.toString());
+                m.setAtkspeed((int)Math.round(m.getAtkspeed()+10));
+                System.out.println("FIGHT\n");
+                System.out.println("NO TIME TO W8!");
+                System.out.println("Choose ur atack");
+                System.out.println("physical[P]");
+                System.out.println("magical[M]");
+                System.out.println("RUNN [R] ");
+                choice = reader.next().toLowerCase().charAt(0);
+                reader = new Scanner(System.in);
+                System.out.print("\n\n");
+                switch (choice) {
+                    case 'p':
+                        System.out.println(c.getName() + " dealt physical"+ c.getAd() + "damage to " + m.getMonstername() );
+                        m.recive_ad_damage(c.getAd());
+                        m.setAtkspeed((int)Math.round(m.getAtkspeed()+10));
+                        //System.out.println(c.toString());
+                        c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
+                        break;
+
+                    case 'm':
+                        System.out.println(c.getName() + " dealt magical "+ c.getAp() + "damage to " + m.getMonstername() );
+                        m.recive_ap_damage(c.getAp());
+                        m.setAtkspeed((int)Math.round(m.getAtkspeed()+10));
+                        //System.out.println(c.toString());
+                        c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
+                        break;
+
+                    case 'R':
+               // System.out.println("got here");
+            }
+
+        }
+
+    }
+        if (c.getHP()!=0){return m.getCoinValue();}
+        else{
+            System.out.println("You fell unconcious and had to pay medical fees");
+            return - 10.0;}
     }
 }

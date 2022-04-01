@@ -3,36 +3,54 @@ package Models;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 import java.util.*;
 import java.util.Scanner;
 
-public class Methods {
-    static Scanner reader = new Scanner(System.in);
-//int HP, int Mana, int speed, int atkspeed, int mr, int ar, int ap, int ad, boolean aggresive, String name, String firstAblity, String secondAbility
-    public static Champion createChamp() {
-        Champion c = new Champion();
-        System.out.print("Please enter Champion Name: ");
-        c.setName(reader.nextLine());
-        reader = new Scanner(System.in);
-        c.setHP(100);
-        c.setMana(100);
-        c.setSpeed(20);
-        c.setAtkspeed(20);
-        c.setMr(5);
-        c.setAr(5);
-        c.setAp(5);
-        c.setAd(20);
-        c.setGold(100.00);
-        c.setAggresive(false);
-        c.setfirstAbility("");
-        c.setSecondAbility("");
 
-        return c;
+
+
+
+
+
+
+public class Methods {
+
+    static Scanner reader = new Scanner(System.in);
+    public static Champion createChamp() throws IOException {
+        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+
+            Champion c = new Champion();
+            List<Champion> championList = new ArrayList<>();
+            System.out.print("Please enter Champion Name: ");
+            c.setName(reader.nextLine());
+            reader = new Scanner(System.in);
+            c.setHP(100);
+            c.setMana(100);
+            c.setSpeed(20);
+            c.setAtkspeed(20);
+            c.setMr(5);
+            c.setAr(5);
+            c.setAp(0);
+            c.setAd(20);
+            c.setGold(100.00);
+            c.setAggresive(false);
+            c.setfirstAbility("");
+            c.setSecondAbility("");
+
+            writeChamp(path, c);
+        System.out.println("Champion erstellt!");
+            return c;
+
     }
 
 
-    public static void gamemenu(){
+    public static void gamemenu() throws IOException {
         char choice;
         do {
             System.out.println("");
@@ -147,7 +165,7 @@ public class Methods {
 
     }
 
-    public static void writeChamp(Path path, List<Champion> cList){
+    public static void writeChamps(Path path, List<Champion> cList){
 
         try {
             Files.delete(path);
@@ -222,4 +240,5 @@ public class Methods {
             System.out.println("You fell unconcious and had to pay medical fees");
             return - 10.0;}
     }
+    
 }

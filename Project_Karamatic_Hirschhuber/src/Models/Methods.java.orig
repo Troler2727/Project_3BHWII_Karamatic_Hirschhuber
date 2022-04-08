@@ -186,6 +186,7 @@ public class Methods {
         }
     }
 
+<<<<<<< HEAD
     public static List<Champion> readChamps(Path path){
         List<String> content = new ArrayList<>();
         List<Champion> cList = new ArrayList<>();
@@ -217,7 +218,7 @@ public class Methods {
         return cList;
 
     }
-
+=======
     public static double fight (Monster m, Champion c){
         boolean repatk;
         char choice;
@@ -280,4 +281,5 @@ public class Methods {
             return - 10.0;}
     }
     
+>>>>>>> 60045c91442c974efd408245735ee70fa42b220f
 }

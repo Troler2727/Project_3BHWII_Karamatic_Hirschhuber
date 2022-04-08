@@ -221,6 +221,7 @@ public class Methods {
     public static double fight (Monster m, Champion c){
         boolean repatk;
         char choice;
+        int maxHP = c.getHP();
         System.out.print("As you walk into the Arena you see yur enemy ");
         System.out.println(m.getMonstername());
         System.out.println("FIGHT\n");
@@ -252,8 +253,9 @@ public class Methods {
 
                 System.out.println("NO TIME TO W8!");
                 System.out.println("Choose ur atack");
-                System.out.println("physical[P]");
-                System.out.println("magical[M]");
+                System.out.println("Physical[P]");
+                System.out.println("Magical[M]");
+                System.out.println("Abilities[A]");
                 System.out.println("RUN [R] ");
                 choice = reader.next().toLowerCase().charAt(0);
                 reader = new Scanner(System.in);
@@ -274,8 +276,24 @@ public class Methods {
                         //System.out.println(c.toString());
                         c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
                         break;
+                    case 'A':
+                       String ability = selectability_f (c);
+                       if (ability == "Stunn"){}
+                        else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
+                        else if (ability == "Rage"){c.setAd(c.getAd()+10);}
+                        else if (ability == "Focus"){c.setAp(c.getMr()+10);}
+                       else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
+                        else if (ability == "none"){}
+
+
+
+
+
+                        break;
+
 
                     case 'R':
+                        return 0;
                // System.out.println("got here");
             }
 
@@ -286,6 +304,31 @@ public class Methods {
         else{
             System.out.println("You fell unconcious and had to pay medical fees");
             return - 10.0;}
+    }
+    public static String selectability_f (Champion c) {
+        char choice;
+        System.out.println("Choose ur ability");
+        System.out.println(c.getfirstAbility() + "1");
+        System.out.println(c.getSecondAbility() + "2");
+        choice = reader.next().toLowerCase().charAt(0);
+        reader = new Scanner(System.in);
+        switch (choice) {
+            case '1':
+
+                return c.getfirstAbility();
+
+
+
+            case '2':
+
+                return c.getSecondAbility();
+
+
+            default:
+                return "none";
+
+        }
+
     }
     
 }

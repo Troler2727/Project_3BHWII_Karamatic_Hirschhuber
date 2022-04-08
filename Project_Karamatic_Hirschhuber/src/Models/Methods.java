@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class Methods {
 
     static Scanner reader = new Scanner(System.in);
+    List<Champion> cList;
     public static Champion createChamp() throws IOException {
         Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
 
@@ -116,7 +117,13 @@ public class Methods {
 
                         switch (choice) {
                             case 'l':
+                                Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
                                 System.out.println("Wählen Sie Ihren Champion aus!");
+                                List<Champion> cList;
+                                cList = readChamps(path);
+                                for(Champion c: cList){
+                                    System.out.println(cList);
+                                }
                                 break;
                             case 'c':
                                 createChamp();
@@ -169,5 +176,37 @@ public class Methods {
         catch(IOException e){
             System.out.println("Fehler beim Hinzufügen!");
         }
+    }
+
+    public static List<Champion> readChamps(Path path){
+        List<String> content = new ArrayList<>();
+        List<Champion> cList = new ArrayList<>();
+        try{
+            content = Files.readAllLines(path);
+        }
+        catch(IOException e){
+            System.out.println("Fehler beim Lesen der Champions");
+        }
+
+        for(String line : content){
+            Champion c = new Champion();
+            String[] parts = line.split(";");
+
+            c.setName(parts[0]);
+            c.setfirstAbility(parts[1]);
+            c.setSecondAbility(parts[2]);
+            c.setGold(Double.parseDouble(parts[3]));
+            c.setHP(Integer.parseInt(parts[4]));
+            c.setMana(Integer.parseInt(parts[5]));
+            c.setAd(Integer.parseInt(parts[6]));
+            c.setAp(Integer.parseInt(parts[7]));
+            c.setAtkspeed(Integer.parseInt(parts[8]));
+            c.setAr(Integer.parseInt(parts[9]));
+            c.setMr(Integer.parseInt(parts[10]));
+            c.setSpeed(Integer.parseInt(parts[11]));
+            cList.add(c);
+        }
+        return cList;
+
     }
 }

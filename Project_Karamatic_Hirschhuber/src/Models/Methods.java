@@ -184,30 +184,38 @@ public class Methods {
         char choice;
         System.out.print("As you walk into the Arena you see yur enemy ");
         System.out.println(m.getMonstername());
+        System.out.println("FIGHT\n");
         //System.out.println(m.toString());
 
         while (m.getHP() > 0 && c.getHP() > 0){
 
             if (m.getAtkspeed()*m.getSpeed()>c.getAtkspeed()*c.getSpeed()){
 
-                System.out.println(m.getMonstername() + " dealt "+ m.getAd() + "damage to you" );
+                System.out.println(m.getMonstername() + " dealt "+ (m.getAd()-m.getAr()) + "damage to you" );
                 c.recive_ad_damage(m.getAd());
                 c.setAtkspeed((int)Math.round(c.getAtkspeed()+10));
-                if(repatk= true){
+                if(repatk= !true){
                 System.out.println(m.toString());}
+                repatk =true;
                 m.setAtkspeed((int)Math.round(m.getAtkspeed()-10));
 
             }
             else {
                 c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
+                repatk = false;
+                System.out.println(c.getName()+":");
                 System.out.println(c.toString());
+
+
+                System.out.println(m.getMonstername()+":");
+                System.out.println(m.toString());
                 m.setAtkspeed((int)Math.round(m.getAtkspeed()+10));
-                System.out.println("FIGHT\n");
+
                 System.out.println("NO TIME TO W8!");
                 System.out.println("Choose ur atack");
                 System.out.println("physical[P]");
                 System.out.println("magical[M]");
-                System.out.println("RUNN [R] ");
+                System.out.println("RUN [R] ");
                 choice = reader.next().toLowerCase().charAt(0);
                 reader = new Scanner(System.in);
                 System.out.print("\n\n");

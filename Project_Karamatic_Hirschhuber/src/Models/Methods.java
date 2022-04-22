@@ -314,7 +314,7 @@ public class Methods {
             System.out.println("You fell unconcious and had to pay medical fees");
             return - 10.0;}
     }
-    public static String selectability_f (Champion c) {
+    public String selectability_f (Champion c) {
         char choice;
         Scanner reader = new Scanner(System.in);
         System.out.println("Choose ur ability");

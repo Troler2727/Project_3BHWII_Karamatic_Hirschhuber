@@ -318,8 +318,8 @@ public class Methods {
         char choice;
         Scanner reader = new Scanner(System.in);
         System.out.println("Choose ur ability");
-        System.out.println(c.getfirstAbility() + "1");
-        System.out.println(c.getSecondAbility() + "2");
+        System.out.println(c.getfirstAbility() + "[1]");
+        System.out.println(c.getSecondAbility() + "[2]");
         choice = reader.next().toLowerCase().charAt(0);
         reader = new Scanner(System.in);
         switch (choice) {

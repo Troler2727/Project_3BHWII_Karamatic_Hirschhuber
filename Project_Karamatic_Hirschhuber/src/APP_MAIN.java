@@ -31,6 +31,7 @@ public class APP_MAIN {
 
        // Methods.gamemenu();
         Login login = new Login();
+        login.run();
 
         Methods m = new Methods();
 

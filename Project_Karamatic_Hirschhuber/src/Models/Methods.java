@@ -149,9 +149,13 @@ public class Methods {
 
     public Champion createChamp() throws IOException {
 
+        String psw,name;
+
         Champion c = new Champion();
         System.out.print("Please enter Champion Name: ");
-        c.setName(reader.nextLine());
+        c.setName(name = reader.nextLine());
+        System.out.print("Please enter Champion PSW: ");
+        psw = reader.nextLine();
         reader = new Scanner(System.in);
         c.setHP(100);
         c.setMana(100);
@@ -314,7 +318,7 @@ public class Methods {
             System.out.println("You fell unconcious and had to pay medical fees");
             return - 10.0;}
     }
-    public static String selectability_f (Champion c) {
+    public String selectability_f (Champion c) {
         char choice;
         System.out.println("Choose ur ability");
         System.out.println(c.getfirstAbility() + "[1]");

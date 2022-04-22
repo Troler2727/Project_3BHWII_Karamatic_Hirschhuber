@@ -316,6 +316,7 @@ public class Methods {
     }
     public static String selectability_f (Champion c) {
         char choice;
+        Scanner reader = new Scanner(System.in);
         System.out.println("Choose ur ability");
         System.out.println(c.getfirstAbility() + "1");
         System.out.println(c.getSecondAbility() + "2");

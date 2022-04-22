@@ -115,7 +115,7 @@ public class Methods {
                                     else{
                                         writeChamp(path, c);
                                         championList = readChamps(path);
-                                        System.out.println("Champion wurde erzeugt");
+                                        System.out.println("Champion wurde erstellt!");
                                     }
                                 }
                                 else{
@@ -291,7 +291,7 @@ public class Methods {
                         else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
                         else if (ability == "Rage"){c.setAd(c.getAd()+10);}
                         else if (ability == "Focus"){c.setAp(c.getMr()+10);}
-                       else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
+                        else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
                         else if (ability == "none"){}
 
 

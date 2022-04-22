@@ -230,32 +230,42 @@ public class Methods {
     public double fight (Monster m, Champion c){
         boolean repatk;
         char choice;
+        int maxHP = c.getHP();
         System.out.print("As you walk into the Arena you see yur enemy ");
         System.out.println(m.getMonstername());
+        System.out.println("FIGHT\n");
         //System.out.println(m.toString());
 
         while (m.getHP() > 0 && c.getHP() > 0){
 
             if (m.getAtkspeed()*m.getSpeed()>c.getAtkspeed()*c.getSpeed()){
 
-                System.out.println(m.getMonstername() + " dealt "+ m.getAd() + "damage to you" );
+                System.out.println(m.getMonstername() + " dealt "+ (m.getAd()-m.getAr()) + "damage to you" );
                 c.recive_ad_damage(m.getAd());
                 c.setAtkspeed((int)Math.round(c.getAtkspeed()+10));
-                if(repatk= true){
+                if(repatk= !true){
                 System.out.println(m.toString());}
+                repatk =true;
                 m.setAtkspeed((int)Math.round(m.getAtkspeed()-10));
 
             }
             else {
                 c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
+                repatk = false;
+                System.out.println(c.getName()+":");
                 System.out.println(c.toString());
+
+
+                System.out.println(m.getMonstername()+":");
+                System.out.println(m.toString());
                 m.setAtkspeed((int)Math.round(m.getAtkspeed()+10));
-                System.out.println("FIGHT\n");
+
                 System.out.println("NO TIME TO W8!");
                 System.out.println("Choose ur atack");
-                System.out.println("physical[P]");
-                System.out.println("magical[M]");
-                System.out.println("RUNN [R] ");
+                System.out.println("Physical[P]");
+                System.out.println("Magical[M]");
+                System.out.println("Abilities[A]");
+                System.out.println("RUN [R] ");
                 choice = reader.next().toLowerCase().charAt(0);
                 reader = new Scanner(System.in);
                 System.out.print("\n\n");
@@ -275,8 +285,24 @@ public class Methods {
                         //System.out.println(c.toString());
                         c.setAtkspeed((int)Math.round(c.getAtkspeed()-10));
                         break;
+                    case 'A':
+                       String ability = selectability_f (c);
+                       if (ability == "Stunn"){}
+                        else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
+                        else if (ability == "Rage"){c.setAd(c.getAd()+10);}
+                        else if (ability == "Focus"){c.setAp(c.getMr()+10);}
+                       else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
+                        else if (ability == "none"){}
+
+
+
+
+
+                        break;
+
 
                     case 'R':
+                        return 0;
                // System.out.println("got here");
             }
 
@@ -287,6 +313,31 @@ public class Methods {
         else{
             System.out.println("You fell unconcious and had to pay medical fees");
             return - 10.0;}
+    }
+    public static String selectability_f (Champion c) {
+        char choice;
+        System.out.println("Choose ur ability");
+        System.out.println(c.getfirstAbility() + "1");
+        System.out.println(c.getSecondAbility() + "2");
+        choice = reader.next().toLowerCase().charAt(0);
+        reader = new Scanner(System.in);
+        switch (choice) {
+            case '1':
+
+                return c.getfirstAbility();
+
+
+
+            case '2':
+
+                return c.getSecondAbility();
+
+
+            default:
+                return "none";
+
+        }
+
     }
     
 }

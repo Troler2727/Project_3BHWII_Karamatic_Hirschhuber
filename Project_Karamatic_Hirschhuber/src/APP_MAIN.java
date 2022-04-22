@@ -32,6 +32,11 @@ public class APP_MAIN {
        // Methods.gamemenu();
         Login login = new Login();
 
+        Methods m = new Methods();
+
+        m.gamemenu();
+
+
 
 
     }

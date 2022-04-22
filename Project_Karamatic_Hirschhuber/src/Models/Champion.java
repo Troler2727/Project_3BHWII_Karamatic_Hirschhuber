@@ -69,7 +69,7 @@ public class Champion extends Entity {
     @Override
     public String toString(){
 
-        return super.toString() + " NAME: " + this._name + " GOLD : " +this.gold+""+ this._firstAbility + " " + this._secondAbility;
+        return " NAME: " + this._name + " GOLD: " +this.gold+""+ this._firstAbility + " " + this._secondAbility + super.toString();
 
 
 

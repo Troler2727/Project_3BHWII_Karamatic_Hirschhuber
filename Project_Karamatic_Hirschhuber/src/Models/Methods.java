@@ -1,57 +1,23 @@
 package Models;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import java.util.*;
-import java.util.Scanner;
-
-
-
-
-
-
-
 
 public class Methods {
 
-    static Scanner reader = new Scanner(System.in);
-    List<Champion> cList;
-    public static Champion createChamp() throws IOException {
-        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
-
-            Champion c = new Champion();
-            List<Champion> championList = new ArrayList<>();
-            System.out.print("Please enter Champion Name: ");
-            c.setName(reader.nextLine());
-            reader = new Scanner(System.in);
-            c.setHP(100);
-            c.setMana(100);
-            c.setSpeed(20);
-            c.setAtkspeed(20);
-            c.setMr(5);
-            c.setAr(5);
-            c.setAp(0);
-            c.setAd(20);
-            c.setGold(100.00);
-            c.setAggresive(false);
-            c.setfirstAbility("");
-            c.setSecondAbility("");
-
-            writeChamp(path, c);
-        System.out.println("Champion erstellt!");
-            return c;
-
-    }
+    private Scanner reader = new Scanner(System.in);
+    private List<Champion> championList;
 
 
-    public static void gamemenu() throws IOException {
+
+    public void gamemenu() throws IOException {
+        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        championList = readChamps(path);
+
         char choice;
         do {
             System.out.println("");
@@ -107,10 +73,10 @@ public class Methods {
                                 System.out.println("50 Leben");
                                 System.out.println("100 Leben");
                                 break;
-                                        }
                         }
-                        while(choice != 'z');
-                        break;
+                    }
+                    while(choice != 'z');
+                    break;
 
                 case 'c':
                     do {
@@ -125,22 +91,46 @@ public class Methods {
 
                         switch (choice) {
                             case 'l':
-                                Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
                                 System.out.println("Wählen Sie Ihren Champion aus!");
                                 List<Champion> cList;
                                 cList = readChamps(path);
                                 for(Champion c: cList){
-                                    System.out.println(cList);
+                                    System.out.println(c);
                                 }
                                 break;
                             case 'c':
-                                createChamp();
+                                // Champion erstellen
+                                Champion c = createChamp();
+                                boolean champNameExists = false;
+                                // überprüfen, ob der Name bereits existiert
+                                if(championList.size()>=1) {
+                                    for (Champion ca : championList) {
+                                        if (ca.getName().equals(c.getName())) {
+                                            champNameExists = true;
+                                        }
+                                    }
+                                    if(champNameExists){
+                                        System.out.println("Champion existiert bereits!");
+                                    }
+                                    else{
+                                        writeChamp(path, c);
+                                        championList = readChamps(path);
+                                        System.out.println("Champion wurde erzeugt");
+                                    }
+                                }
+                                else{
+                                    writeChamp(path, c);
+                                    System.out.println("Champion wurde erstellt!");
+                                    championList = readChamps(path);
+                                }
+                                // falls der NAme nicht existiert, wird er der Liste der Champs hinzugefügt
+
                                 break;
                             case 'd':
                                 System.out.println("Wählen Sie Ihren Champion aus!");
                                 break;
-                                        }
                         }
+                    }
                     while(choice != 'z');
                     break;
 
@@ -157,7 +147,28 @@ public class Methods {
         while(choice != 'b');
     }
 
-    public static void writeChamp(Path path, Champion c) throws IOException {
+    public Champion createChamp() throws IOException {
+
+        Champion c = new Champion();
+        System.out.print("Please enter Champion Name: ");
+        c.setName(reader.nextLine());
+        reader = new Scanner(System.in);
+        c.setHP(100);
+        c.setMana(100);
+        c.setSpeed(20);
+        c.setAtkspeed(20);
+        c.setMr(5);
+        c.setAr(5);
+        c.setAp(0);
+        c.setAd(20);
+        c.setGold(100.00);
+        c.setAggresive(false);
+        c.setfirstAbility("");
+        c.setSecondAbility("");
+
+        return c;
+    }
+    public void writeChamp(Path path, Champion c) throws IOException {
 
         //Article a in eine Zeichenkette umwandeln mit Strichppunkt dazwischen
         String champ = c.getName() + ";" + c.getfirstAbility() + ";" + c.getSecondAbility() + ";" + c.getGold()+ ";" +
@@ -171,8 +182,7 @@ public class Methods {
         }
 
     }
-
-    public static void writeChamps(Path path, List<Champion> cList){
+    public void writeChamps(Path path, List<Champion> cList){
 
         try {
             Files.delete(path);
@@ -185,8 +195,7 @@ public class Methods {
             System.out.println("Fehler beim Hinzufügen!");
         }
     }
-
-    public static List<Champion> readChamps(Path path){
+    public List<Champion> readChamps(Path path){
         List<String> content = new ArrayList<>();
         List<Champion> cList = new ArrayList<>();
         try{
@@ -218,7 +227,7 @@ public class Methods {
 
     }
 
-    public static double fight (Monster m, Champion c){
+    public double fight (Monster m, Champion c){
         boolean repatk;
         char choice;
         int maxHP = c.getHP();

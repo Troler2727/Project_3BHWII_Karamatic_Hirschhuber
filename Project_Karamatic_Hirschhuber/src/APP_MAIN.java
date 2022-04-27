@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class APP_MAIN {
 
     public static void main(String[] args) throws IOException {
+        //sebi path     Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        //ian path      //Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+
+
         // public Entity(int HP,int Mana,int speed, int atkspeed,int mr,int ar, int ap,int ad,boolean aggresive)
         //Entity e1 = new Entity(100, 100, 100,100,10,10, 10,10,false);
         //Entity e2 = new Entity(100, 100, 100,100,10,10, 10,20,false);
@@ -18,8 +22,6 @@ public class APP_MAIN {
         //Champion c1 = Methods.createChamp();
         //double gold = Methods.fight(m1,c1);
         //System.out.println(gold);
-        //Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
-
 
         //System.out.println(e1);
        // e1.recive_ad_damage(20); works

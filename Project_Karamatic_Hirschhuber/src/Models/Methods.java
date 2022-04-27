@@ -15,7 +15,8 @@ public class Methods {
 
 
     public void gamemenu() throws IOException {
-        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path2 = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt");
         championList = readChamps(path);
 
         char choice;
@@ -149,13 +150,9 @@ public class Methods {
 
     public Champion createChamp() throws IOException {
 
-        String psw,name;
-
         Champion c = new Champion();
         System.out.print("Please enter Champion Name: ");
-        c.setName(name = reader.nextLine());
-        System.out.print("Please enter Champion PSW: ");
-        psw = reader.nextLine();
+        c.setName(reader.nextLine());
         reader = new Scanner(System.in);
         c.setHP(100);
         c.setMana(100);
@@ -169,13 +166,6 @@ public class Methods {
         c.setAggresive(false);
         c.setfirstAbility("");
         c.setSecondAbility("");
-
-        Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
-
-
-        Files.writeString(path, name, StandardOpenOption.APPEND);
-        Files.writeString(path, psw, StandardOpenOption.APPEND);
-
 
         return c;
     }
@@ -298,7 +288,7 @@ public class Methods {
                         break;
                     case 'A':
                        String ability = selectability_f (c);
-                       if (ability == "Stunn"){}
+                       if (ability == "Stun"){}
                         else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
                         else if (ability == "Rage"){c.setAd(c.getAd()+10);}
                         else if (ability == "Focus"){c.setAp(c.getMr()+10);}

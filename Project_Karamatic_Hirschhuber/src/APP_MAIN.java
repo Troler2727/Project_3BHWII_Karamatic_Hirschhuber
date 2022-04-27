@@ -30,8 +30,12 @@ public class APP_MAIN {
         //System.out.println(e1);
 
        // Methods.gamemenu();
+
         Login login = new Login();
         login.run();
+
+       // Login login = new Login();
+
 
         Methods m = new Methods();
 

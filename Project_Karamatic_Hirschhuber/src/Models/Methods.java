@@ -15,7 +15,7 @@ public class Methods {
 
 
     public void gamemenu() throws IOException {
-        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
         championList = readChamps(path);
 
         char choice;
@@ -115,7 +115,7 @@ public class Methods {
                                     else{
                                         writeChamp(path, c);
                                         championList = readChamps(path);
-                                        System.out.println("Champion wurde erzeugt");
+                                        System.out.println("Champion wurde erstellt!");
                                     }
                                 }
                                 else{
@@ -169,6 +169,13 @@ public class Methods {
         c.setAggresive(false);
         c.setfirstAbility("");
         c.setSecondAbility("");
+
+        Path path = Paths.get("\"D:\\\\funn\\\\PROJECTS\\\\Project_3BHWII_Karamatic_Hirschhuber\\\\Champion_Liste\\\\login.txt\");
+
+
+        Files.writeString(path, name, StandardOpenOption.APPEND);
+        Files.writeString(path, psw, StandardOpenOption.APPEND);
+
 
         return c;
     }
@@ -295,7 +302,7 @@ public class Methods {
                         else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
                         else if (ability == "Rage"){c.setAd(c.getAd()+10);}
                         else if (ability == "Focus"){c.setAp(c.getMr()+10);}
-                       else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
+                        else if (ability == "prepare for impact"){c.setAr(c.getAr()+10);}
                         else if (ability == "none"){}
 
 
@@ -320,6 +327,7 @@ public class Methods {
     }
     public String selectability_f (Champion c) {
         char choice;
+        Scanner reader = new Scanner(System.in);
         System.out.println("Choose ur ability");
         System.out.println(c.getfirstAbility() + "[1]");
         System.out.println(c.getSecondAbility() + "[2]");

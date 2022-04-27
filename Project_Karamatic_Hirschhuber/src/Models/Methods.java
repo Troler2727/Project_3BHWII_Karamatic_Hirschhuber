@@ -170,7 +170,7 @@ public class Methods {
         c.setfirstAbility("");
         c.setSecondAbility("");
 
-        Path path = Paths.get("\"D:\\\\funn\\\\PROJECTS\\\\Project_3BHWII_Karamatic_Hirschhuber\\\\Champion_Liste\\\\login.txt\");
+        Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
 
 
         Files.writeString(path, name, StandardOpenOption.APPEND);

@@ -15,7 +15,8 @@ public class Methods {
 
 
     public void gamemenu() throws IOException {
-        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path2 = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt");
         championList = readChamps(path);
 
         char choice;
@@ -44,40 +45,8 @@ public class Methods {
                     break;
 
                 case 'p':
-                    do {
-                        System.out.println("SHOP \n");
-                        System.out.println("AD[D]");
-                        System.out.println("AP[P]");
-                        System.out.println("Tank[T]");
-                        System.out.println("Zurück[Z]");
-                        System.out.println("Ihre Wahl: ");
-                        choice = reader.next().toLowerCase().charAt(0);
-                        reader = new Scanner(System.in);
-
-                        switch (choice) {
-                            case 'd':
-                                System.out.println("10 AD");
-                                System.out.println("20 AD");
-                                System.out.println("40 AD");
-                                break;
-                            case 'p':
-                                System.out.println("10 AP");
-                                System.out.println("25 AP");
-                                System.out.println("50 AP");
-                                break;
-                            case 't':
-                                System.out.println("10 Rüstung");
-                                System.out.println("20 Rüstung");
-                                System.out.println("15 Magieresistenz");
-                                System.out.println("30 Magieresistenz");
-                                System.out.println("50 Leben");
-                                System.out.println("100 Leben");
-                                break;
-                        }
-                    }
-                    while(choice != 'z');
+                    shop();
                     break;
-
                 case 'c':
                     do {
                         System.out.println("CHAMPIONVERWALTUNG\n");
@@ -149,13 +118,9 @@ public class Methods {
 
     public Champion createChamp() throws IOException {
 
-        String psw,name;
-
         Champion c = new Champion();
         System.out.print("Please enter Champion Name: ");
-        c.setName(name = reader.nextLine());
-        System.out.print("Please enter Champion PSW: ");
-        psw = reader.nextLine();
+        c.setName(reader.nextLine());
         reader = new Scanner(System.in);
         c.setHP(100);
         c.setMana(100);
@@ -169,13 +134,6 @@ public class Methods {
         c.setAggresive(false);
         c.setfirstAbility("");
         c.setSecondAbility("");
-
-        Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
-
-
-        Files.writeString(path, name, StandardOpenOption.APPEND);
-        Files.writeString(path, psw, StandardOpenOption.APPEND);
-
 
         return c;
     }
@@ -298,7 +256,7 @@ public class Methods {
                         break;
                     case 'A':
                        String ability = selectability_f (c);
-                       if (ability == "Stunn"){}
+                       if (ability == "Stun"){}
                         else if (ability == "Heal"){if (c.getHP()+25 <= maxHP){c.setHP(c.getHP()+25);}}
                         else if (ability == "Rage"){c.setAd(c.getAd()+10);}
                         else if (ability == "Focus"){c.setAp(c.getMr()+10);}
@@ -350,6 +308,62 @@ public class Methods {
 
         }
 
+    }
+
+    public void shop(){
+        char choice;
+        choice = reader.next().toLowerCase().charAt(0);
+        reader = new Scanner(System.in);
+        do {
+            System.out.println("SHOP \n");
+            System.out.println("AD[D]");
+            System.out.println("AP[P]");
+            System.out.println("Tank[T]");
+            System.out.println("Zurück[Z]");
+            System.out.println("Ihre Wahl: ");
+            choice = reader.next().toLowerCase().charAt(0);
+            reader = new Scanner(System.in);
+
+            switch (choice) {
+                case 'd':
+                    do {
+                        System.out.println("10 AD-30 Gold[A]");
+                        System.out.println("20 AD-50 Gold[B]");
+                        System.out.println("40 AD-90 Gold[C]");
+                        System.out.println("Zurück[Z]");
+
+                        switch (choice) {
+                            case 'a':
+                                System.out.println("Test a");
+                                break;
+                            case 'b':
+                                System.out.println("test b");
+                                break;
+                            case 'c':
+                                System.out.println("test c");
+                                break;
+                        }
+                    }
+
+                        while (choice != 'z') ;
+                        break;
+
+                case 'p':
+                    System.out.println("10 AP-30 Gold[A]");
+                    System.out.println("25 AP-50 Gold[B]");
+                    System.out.println("50 AP-90 Gold[C]");
+                    break;
+                case 't':
+                    System.out.println("10 Rüstung-15 Gold[A]");
+                    System.out.println("20 Rüstung-25 Gold[B]");
+                    System.out.println("15 Magieresistenz-15 Gold[C]");
+                    System.out.println("30 Magieresistenz-25 Gold[D]");
+                    System.out.println("50 Leben-75 Gold[E]");
+                    System.out.println("100 Leben-125 Gold[F]");
+                    break;
+            }
+        }
+        while(choice != 'z');
     }
     
 }

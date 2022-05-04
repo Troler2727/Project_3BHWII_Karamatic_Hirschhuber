@@ -1,5 +1,4 @@
 package Models;
-import Methods.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -8,7 +7,7 @@ import java.util.Scanner;
 public class Login {
     public void run() throws FileNotFoundException {
 
-        Scanner scan = new Scanner (new File("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));
+        Scanner scan = new Scanner (new File("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));
         Scanner keyboard = new Scanner (System.in);
 
         HashMap<String, String> psw = new HashMap<String, String>();

@@ -11,12 +11,14 @@ public class Methods {
 
     private Scanner reader = new Scanner(System.in);
     private List<Champion> championList;
+    private Champion activeChamp = new Champion();
 
 
 
     public void gamemenu() throws IOException {
         Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
         championList = readChamps(path);
+        activeChamp = null;
 
         char choice;
         do {
@@ -41,6 +43,7 @@ public class Methods {
 
                 case 'm':
                     System.out.println("Monster bekämpfen");
+                    System.out.println(activeChamp);
                     break;
 
                 case 'p':
@@ -92,11 +95,13 @@ public class Methods {
                         switch (choice) {
                             case 'l':
                                 System.out.println("Wählen Sie Ihren Champion aus!");
-                                List<Champion> cList;
-                                cList = readChamps(path);
-                                for(Champion c: cList){
-                                    System.out.println(c);
-                                }
+                               activeChamp = Login.Login(path);
+                                System.out.println(activeChamp + "here");
+                            //    List<Champion> cList;
+                            //    cList = readChamps(path);
+                            //    for(Champion c: cList){
+                            //        System.out.println(c);
+                            //    }
                                 break;
                             case 'c':
                                 // Champion erstellen
@@ -114,6 +119,7 @@ public class Methods {
                                     }
                                     else{
                                         writeChamp(path, c);
+
                                         championList = readChamps(path);
                                         System.out.println("Champion wurde erstellt!");
                                     }
@@ -173,8 +179,7 @@ public class Methods {
         Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
 
 
-        Files.writeString(path, name, StandardOpenOption.APPEND);
-        Files.writeString(path, psw, StandardOpenOption.APPEND);
+
 
 
         return c;
@@ -206,7 +211,7 @@ public class Methods {
             System.out.println("Fehler beim Hinzufügen!");
         }
     }
-    public List<Champion> readChamps(Path path){
+    public static List<Champion> readChamps(Path path){
         List<String> content = new ArrayList<>();
         List<Champion> cList = new ArrayList<>();
         try{

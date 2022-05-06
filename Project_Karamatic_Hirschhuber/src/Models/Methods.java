@@ -351,6 +351,7 @@ public class Methods {
                                 writeChamp(path, c);
                                 championList = readChamps(path);
                                 System.out.println(activeChamp);
+                                //also alte liste(csv) abspeichern und dann splitten die ändererungen hinzufügen und überschreiben (also csv mit cList ersetzen)
                                 break;
                             case 'b':
                                 System.out.println("test b");

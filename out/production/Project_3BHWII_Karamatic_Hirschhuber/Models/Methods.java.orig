@@ -16,8 +16,8 @@ public class Methods {
 
 
     public void gamemenu() throws IOException {
-        Path path = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
-        Path path2 = Paths.get("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt");
+        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
+        Path path2 = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt");
         championList = readChamps(path);
         activeChamp = null;
 
@@ -126,10 +126,7 @@ public class Methods {
 
         Champion c = new Champion();
         System.out.print("Please enter Champion Name: ");
-        String name = reader.nextLine();
-        c.setName(name);
-        System.out.print("Please enter Champion PSW: ");
-        String psw = reader.nextLine();
+        c.setName(reader.nextLine());
         reader = new Scanner(System.in);
         c.setHP(100);
         c.setMana(100);
@@ -146,10 +143,6 @@ public class Methods {
 
 
         Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
-        if(Files.exists(path)){
-            Files.writeString(path, name+ "\n", StandardOpenOption.APPEND);
-            Files.writeString(path, psw + "\n", StandardOpenOption.APPEND);
-        }
 
 
 
@@ -359,16 +352,7 @@ public class Methods {
 
                         switch (choice) {
                             case 'a':
-<<<<<<< HEAD
-                                System.out.println(activeChamp.getAd());
-                                activeChamp.setAd(activeChamp.getAd()+30);
-                                writeChamp(path, c);
-                                championList = readChamps(path);
-                                System.out.println(activeChamp);
-                                //also alte liste(csv) abspeichern und dann splitten die ändererungen hinzufügen und überschreiben (also csv mit cList ersetzen)
-=======
                                 System.out.println("Test a");
->>>>>>> 9643cd181d3546c143d0d9f5cc3082b3823f3cca
                                 break;
                             case 'b':
                                 System.out.println("test b");

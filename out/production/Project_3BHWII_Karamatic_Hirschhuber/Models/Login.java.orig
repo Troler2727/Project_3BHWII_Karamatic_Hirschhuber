@@ -16,23 +16,29 @@ public class Login {
 
     static {
         try {
-            scan = new Scanner (new File("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));}
-        catch (FileNotFoundException e) {
+            scan = new Scanner (new File("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
+
     static Scanner keyboard = new Scanner (System.in);
 
     public static Champion Login(Path path) throws FileNotFoundException, IndexOutOfBoundsException {
+
 
         CList = Methods.readChamps(path);
         HashMap<String, String> psw = new HashMap<String, String>();
 
         // Add keys and values (Country, City)
         do{
-            psw.put(scan.nextLine(), scan.nextLine());}
+        psw.put(scan.nextLine(), scan.nextLine());}
         while(scan.hasNextLine());
+
+
+
+
 
         //String user = scan.nextLine();
         //String pass = scan.nextLine(); // looks at selected file in scan

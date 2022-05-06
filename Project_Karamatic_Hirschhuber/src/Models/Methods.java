@@ -311,26 +311,30 @@ public class Methods {
     }
 
     public void shop(){
+        //TODO: shop
         char choice;
-        choice = reader.next().toLowerCase().charAt(0);
-        reader = new Scanner(System.in);
+
         do {
             System.out.println("SHOP \n");
             System.out.println("AD[D]");
             System.out.println("AP[P]");
             System.out.println("Tank[T]");
             System.out.println("Zurück[Z]");
-            System.out.println("Ihre Wahl: ");
+            System.out.print("Ihre Wahl: ");
             choice = reader.next().toLowerCase().charAt(0);
             reader = new Scanner(System.in);
 
             switch (choice) {
                 case 'd':
                     do {
+                        System.out.println("");
                         System.out.println("10 AD-30 Gold[A]");
                         System.out.println("20 AD-50 Gold[B]");
                         System.out.println("40 AD-90 Gold[C]");
                         System.out.println("Zurück[Z]");
+                        System.out.println("Ihre Wahl: ");
+                        choice = reader.next().toLowerCase().charAt(0);
+                        reader = new Scanner(System.in);
 
                         switch (choice) {
                             case 'a':
@@ -343,10 +347,10 @@ public class Methods {
                                 System.out.println("test c");
                                 break;
                         }
-                    }
 
-                        while (choice != 'z') ;
-                        break;
+                    }
+                    while (choice != 'z') ;
+                    break;
 
                 case 'p':
                     System.out.println("10 AP-30 Gold[A]");

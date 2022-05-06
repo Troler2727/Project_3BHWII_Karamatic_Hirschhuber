@@ -2,7 +2,6 @@ package Models;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -100,6 +99,7 @@ public class Methods {
                                     championList = readChamps(path);
                                 }
                                 // falls der NAme nicht existiert, wird er der Liste der Champs hinzugefügt
+
                                 break;
                             case 'd':
                                 System.out.println("Wählen Sie Ihren Champion aus!");
@@ -141,6 +141,14 @@ public class Methods {
         c.setfirstAbility("");
         c.setSecondAbility("");
 
+
+        Path path = Paths.get("D://funn//PROJECTS//Project_3BHWII_Karamatic_Hirschhuber//Champion_Liste//login.txt");
+
+
+
+
+
+
         return c;
     }
     public void writeChamp(Path path, Champion c) throws IOException {
@@ -170,7 +178,12 @@ public class Methods {
             System.out.println("Fehler beim Hinzufügen!");
         }
     }
+<<<<<<< HEAD
+
+    public List<Champion> readChamps(Path path){
+=======
     public static List<Champion> readChamps(Path path){
+>>>>>>> c778765f4ad9cf2f5b815f66fc93302d2bf3b1c8
         List<String> content = new ArrayList<>();
         List<Champion> cList = new ArrayList<>();
         try{
@@ -316,9 +329,7 @@ public class Methods {
 
     }
 
-    public void shop() throws IOException {
-        Path path = Paths.get("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\championlist.csv");
-        Champion c = activeChamp;
+    public void shop(){
         //TODO: shop
         char choice;
 
@@ -346,11 +357,7 @@ public class Methods {
 
                         switch (choice) {
                             case 'a':
-                                System.out.println(activeChamp.getAd());
-                                activeChamp.setAd(activeChamp.getAd()+30);
-                                writeChamp(path, c);
-                                championList = readChamps(path);
-                                System.out.println(activeChamp);
+
                                 break;
                             case 'b':
                                 System.out.println("test b");

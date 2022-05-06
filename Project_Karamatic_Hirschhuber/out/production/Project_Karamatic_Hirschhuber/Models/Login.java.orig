@@ -16,7 +16,7 @@ public class Login {
 
     static {
         try {
-            scan = new Scanner (new File("C:\\Users\\HP\\Desktop\\repositories\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));
+            scan = new Scanner (new File("D:\\funn\\PROJECTS\\Project_3BHWII_Karamatic_Hirschhuber\\Champion_Liste\\login.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

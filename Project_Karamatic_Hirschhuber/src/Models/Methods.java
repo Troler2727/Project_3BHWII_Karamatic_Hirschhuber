@@ -164,6 +164,7 @@ public class Methods {
             System.out.println("Fehler beim Hinzufügen!");
         }
     }
+
     public List<Champion> readChamps(Path path){
         List<String> content = new ArrayList<>();
         List<Champion> cList = new ArrayList<>();
@@ -338,7 +339,7 @@ public class Methods {
 
                         switch (choice) {
                             case 'a':
-                                System.out.println("Test a");
+
                                 break;
                             case 'b':
                                 System.out.println("test b");

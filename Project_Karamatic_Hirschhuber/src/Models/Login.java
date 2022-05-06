@@ -16,7 +16,7 @@ public class Login {
         do{
         psw.put(scan.nextLine(), scan.nextLine());}
         while(scan.hasNextLine());
-        System.out.println(psw);
+
 
 
 
